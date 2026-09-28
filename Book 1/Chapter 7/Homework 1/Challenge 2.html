@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <script>
+        // Create a string containing every letter of the alphabet.
+        var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        // Create an empty string.
+        // We will add random letters to this string.
+        var randomString = "";
+
+        // Keep running the loop while the random string
+        // contains fewer than 6 letters.
+        while (randomString.length < 6) {
+
+            // Generate a random number between 0 and 25.
+            // Math.random() gives us a random decimal.
+            // Multiplying by alphabet.length gives us a number
+            // based on the number of letters in the alphabet.
+            // Math.floor() removes the decimal part.
+            var randomIndex = Math.floor(Math.random() * alphabet.length);
+
+            // Get the letter at the random position.
+            var randomLetter = alphabet[randomIndex];
+
+            // Add the random letter to the end of randomString.
+            randomString += randomLetter;
+        }
+
+        // Display the finished random string.
+        console.log(randomString);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <script>
+        // Create an array containing words that Hangman can choose from.
+        var words = [
+
+            // First word.
+            "javascript",
+
+            // Second word.
+            "monkey",
+
+            // Third word.
+            "amazing",
+
+            // Fourth word.
+            "pancake",
+
+            // Our additional word.
+            "computer",
+
+            // Another additional word.
+            "coding",
+
+            // Another additional word.
+            "programming",
+
+            // Another additional word.
+            "website"
+        ];
+
+        // Pick a random word from the array.
+        var word = words[Math.floor(Math.random() * words.length)];
+
+        // Display the randomly selected word.
+        console.log(word);
+    </script>
+</body>
+
+</html>

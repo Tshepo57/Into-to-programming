@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <script>
+        // Create an array containing the possible words.
+        var words = [
+            "javascript",
+            "monkey",
+            "amazing",
+            "pancake",
+            "computer",
+            "coding",
+            "programming",
+            "website"
+        ];
+
+        // Choose a random word from the array.
+        var word = words[Math.floor(Math.random() * words.length)];
+
+        // Create an empty array to store the player's progress.
+        var answerArray = [];
+
+        // Go through every letter in the secret word.
+        for (var i = 0; i < word.length; i++) {
+
+            // Put an underscore in the answer array
+            // for every hidden letter.
+            answerArray[i] = "_";
+        }
+
+        // Keep track of how many letters still need to be guessed.
+        var remainingLetters = word.length;
+
+        // Keep playing while there are letters left to guess.
+        while (remainingLetters > 0) {
+
+            // Show the player's current progress.
+            alert(answerArray.join(" "));
+
+            // Ask the player to guess a letter.
+            var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+
+            // If the player clicks Cancel...
+            if (guess === null) {
+
+                // Stop the game.
+                break;
+
+                // If the player enters more than one character...
+            } else if (guess.length !== 1) {
+
+                // Tell the player to enter only one letter.
+                alert("Please enter a single letter.");
+
+            } else {
+
+                // Convert the player's guess to lowercase.
+                // This means "A" becomes "a".
+                guess = guess.toLowerCase();
+
+                // Check every letter in the secret word.
+                for (var j = 0; j < word.length; j++) {
+
+                    // Check whether the current letter matches the guess.
+                    if (word[j] === guess) {
+
+                        // Put the guessed letter into the answer array.
+                        answerArray[j] = guess;
+
+                        // Reduce the number of remaining letters by 1.
+                        remainingLetters--;
+                    }
+                }
+            }
+        }
+
+        // Show the final answer.
+        alert(answerArray.join(" "));
+
+        // Tell the player what the correct word was.
+        alert("Good job! The answer was " + word);
+    </script>
+</body>
+
+</html>

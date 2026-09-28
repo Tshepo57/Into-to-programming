@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <script>
+        // Store the normal sentence that we want to convert.
+        var input = "javascript is awesome";
+
+        // Create an empty string.
+        // We will build the hacker version inside this variable.
+        var output = "";
+
+        // Go through every character in the input string.
+        // i starts at 0 and continues until we reach the end.
+        for (var i = 0; i < input.length; i++) {
+
+            // Store the current character in a variable.
+            var letter = input[i];
+
+            // Check whether the current letter is "a".
+            if (letter === "a") {
+
+                // Replace "a" with "4".
+                output += "4";
+
+                // If it wasn't "a", check whether it is "e".
+            } else if (letter === "e") {
+
+                // Replace "e" with "3".
+                output += "3";
+
+                // If it wasn't "e", check whether it is "i".
+            } else if (letter === "i") {
+
+                // Replace "i" with "1".
+                output += "1";
+
+                // If it wasn't "i", check whether it is "o".
+            } else if (letter === "o") {
+
+                // Replace "o" with "0".
+                output += "0";
+
+                // If the character isn't one of our special letters...
+            } else {
+
+                // Keep the original character.
+                output += letter;
+            }
+        }
+
+        // Display the finished hacker text.
+        console.log(output);
+    </script>
+</body>
+
+</html>
