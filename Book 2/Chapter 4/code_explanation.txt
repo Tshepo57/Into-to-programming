@@ -1,0 +1,108 @@
+---------------
+JS FILE
+---------------
+
+YUI (Yahoo User Interface) is a JavaScript library created by Yahoo that was popular in the late 2000s and early 2010s. It provided:
+
+1. DOM manipulation (similar to jQuery)
+2. Animation utilities
+3. Modular architecture (load only what you need)
+4. Cross-browser compatibility
+_______________________________________________________________________________________
+.use(): Loads specific modules
+1. 'node' - DOM manipulation (like document.querySelector)
+2. 'anim' - Animation framework
+3. 'anim-node-plugin' - Adds animation methods directly to DOM nodes
+
+________________________________________________________________________________________
+.use('node', 'anim', 'anim-node-plugin', function(Y) { ... })
+This is an anonymous callback function meaning I'm passing a function AS AN ARGUMENT to another function using the .use() method.
+
+_________________________________________________________________________________________
+var o = Y.one('#o')  -  Get container element with ID 'o'
+
+_________________________________________________________________________________________
+var b = Y.Node.create('<span class="bubble"></span>');
+1. Y - passing a function AS AN ARGUMENT
+2. Node is a module/object inside YUI that contains methods for working with DOM elements (HTML elements).
+3. create is a method that creates a new HTML element from a string.
+4. <span> is an HTML element (tag). It's a generic inline container used to group content or apply styling.
+5. class="bubble" is a CSS class - it's a label/identifier you give to elements so you can style them with CSS.
+
+___________________________________________________________________________________________
+.plug() means "attach a plugin to this element"
+
+1. b = the bubble element we created
+2. .plug() = method to add functionality
+3. Y.Plugin.NodeFX = the animation plugin we're adding
+
+___________________________________________________________________________________________
+duration: 7 - The bubble will take 7 seconds to complete its animation (moving up and fading out).
+easing: Y.Easing.easeOut 
+1. How the animation moves:** It slows down at the end
+   (a)**`easeOut`** → Starts fast, slows down at the end (like a real bubble floating up)
+   (b)**`easeIn`** → Starts slow, speeds up
+   (c)**`linear`** → Same speed throughout
+
+2. top: 0 → Move to the very top (0 pixels from top)
+3. opacity: 0 → Fade to completely transparent/invisible
+   (a) opacity: 1    // 100% visible (completely SOLID)
+   (b)opacity: 0.5  // 50% visible (semi-transparent)
+   (c)opacity: 0    // 0% visible (completely INVISIBLE)
+
+
+4. The on object lets you listen for events:
+   (a) end → Animation finished
+   (b) start → Animation started (if you wanted)
+       (a) 10000 → Wait 10,000 milliseconds (10 seconds)
+       (b) this → The context (the plugin instance)
+       (c) function() { ... } → What to do after waiting
+       (d) this.get('node') → Get the actual bubble element
+       (f) animBubble(...) → Restart the animation with new random properties
+
+_________________________________________________________________________________________
+1.  var v = Math.floor(Math.random() * (max - min)) + min;
+    This creates a random bubble size between min and max
+
+2.  height: v + 'px' - If v = 45, then: height: '45px'
+3.  top: (oH + 2) + 'px' - Positions the bubble vertically (oH - container height + 2 (54 + 2 = 56px))
+
+___________________________________________________________________________________________
+1. b.setStyle('left', Math.floor(Math.random() * (oW - v)));
+   (a) b = The bubble element we created earlier
+   (b) setStyle() = method that sets ONE CSS style on an element
+   (c) left = controls horizontal position
+   (d) Why subtract the bubble size? = So the bubble doesn't go off the right edge!
+ 
+ 2. b.fx.set('to.top', Math.floor(Math.random() * (oH / 2)));
+    (a) Remember when we attached the animation plugin with .plug()
+        fx is that animation plugin we attached
+    (b) 'to.top' = The final TOP position where the animation will END
+
+___________________________________________________________________________________________
+1. Y.later() = It's YUI's version of setTimeout() in regular JavaScript.
+2. this = refers to the CONTEXT (the object) that the function should run in.
+3. function() { makeBubble(); } = It calls makeBubble() to create a new bubble
+
+_________________________________________________________________________________________
+
+----------------------
+CSS FILE
+----------------------
+
+position: relative 
+ (a)It makes the container the "parent" so bubbles inside it position themselves based on
+    the container's edges, not the whole webpage.
+position: absolute;
+ (b) It lets you place an element exactly where you want it on the page, 
+     like putting a sticker anywhere on a poster.
+
+margin-left: auto and margin-right: 
+ (a)It centers the container horizontally on the page by automatically making the left 
+    and right margins equal.
+
+display: block
+ (a) Treat this element as a BLOCK (takes up full width, starts on new line)
+
+
+

@@ -1,0 +1,13 @@
+body{
+    background-color: LightGray;
+}
+h1{
+    color: DarkBlue;}
+#MyName{
+    color: DarkRed;
+}
+#changeList{
+    width: 200px;
+    border-radius: 10px;
+    background-color: LightBlue;
+}

@@ -1,0 +1,119 @@
+.eye {
+    background-color: blue;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+  }
+  
+  .arm {
+    background-color: #d42f2f;
+    position: absolute;
+    top: 32%;
+    width: 2%;
+    height: 30%;
+  }
+
+  .ear {
+    background-color: #2eb7f6;
+    width: 15%;
+    height: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+  }
+
+  .leg {
+    background-color: #d42f2f;
+    position: absolute;
+    width: 3%;
+    height: 20%;
+    top: 66%;
+  }
+  
+  #head {
+    width: 20%;
+    height: 20%;
+    border-radius: 15%;
+    background-color: #2eb7f6;
+    position: absolute;
+    left: 38%;
+    top: 5%;
+  }
+  
+  #righteye {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+  }
+  
+  #lefteye {
+    position: absolute;
+    left: 60%;
+    top: 20%;
+  }
+
+  #rightear {
+    left: -10%;
+  }
+
+  #leftear {
+    right: -10%;
+  }
+
+  #nose {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10%;
+    height: 10%;
+    background-color: greenyellow;
+  }
+  
+  #mouth {
+    position: absolute;
+    width: 65%;
+    height: 15%;
+    left: 20%;
+    top: 70%;
+    background-color: rgb(210, 58, 31);
+  }
+
+  #neck {
+    position: absolute;
+    width: 3%;
+    height: 5%;
+    background-color: #888;
+    left: 47.5%;
+    top: 27.5%;
+  }
+  
+  #body {
+    position: absolute;
+    left: 40%;
+    top: 31%;
+    width: 15%;
+    height: 30%;
+    background-color: #b4d415;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  #rightarm {
+    position: absolute;
+    left: 38%;
+  }
+  
+  #leftarm {
+    position: absolute;
+    right: 26%;
+    width: 18%;
+    height: 5%;
+  }
+
+  #rightleg {
+    left: 43%;
+  }
+
+  #leftleg {
+    left: 51%;
+  }

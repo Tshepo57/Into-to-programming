@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: blueviolet;
+}
+
+ul{
+    color: rgb(223, 223, 238);
+}
+#container {
+    padding: 20px;
+    width: 500px;
+    height: 100%;
+    background-color: #19f9ea;
+}
+
+#track {
+    width: 500px;
+    border-top: 2px dashed rgba(100, 36, 209, 0.847);
+    border-bottom: 2px dashed rgb(184, 14, 14);
+    margin: 50px auto;
+}
+
+#train {
+    height: 80px;
+    width: 100px;
+    position: relative;
+    left: 0px;
+}
+
+#train img{
+    height: 100%;
+    width: 100%;
+}
+
+#stopButton {
+    padding-top: 15px;
+    margin: 10px auto;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+}
