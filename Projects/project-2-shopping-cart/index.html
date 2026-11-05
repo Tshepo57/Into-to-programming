@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is a modern HTML5 page -->
+<html lang="en">
+
+<head>
+    <!-- Information ABOUT the page (not shown on the page itself) -->
+    <meta charset="utf-8">                                                 <!-- show all characters correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">   <!-- fit the screen on phones -->
+    <title>Shopping Cart</title>                                           <!-- text on the browser tab -->
+
+    <!-- Link to the stylesheet that makes the table look nice -->
+    <link rel="stylesheet" href="shopStart.css">
+</head>
+
+<body>
+    <h1>Snack Shop</h1>
+
+    <!-- Empty paragraph. JavaScript (display_all) builds the table of snacks and puts it in here. -->
+    <p id="demo"></p>
+
+    <!-- The Checkout button. onclick="checkout()" means: when it's clicked, run the checkout function. -->
+    <button id="checkoutButton" onclick="checkout()">Checkout</button>
+
+    <!-- Empty paragraph. The checkout function writes the total price in here. -->
+    <p id="total"></p>
+
+    <!-- Load the JavaScript LAST, so the paragraphs above already exist when the script runs -->
+    <script src="shopStart.js"></script>
+</body>
+
+</html>
