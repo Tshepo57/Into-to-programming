@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Project 3 - Portfolio Site (Code College, Intro to Programming)
+     A one-page portfolio built with Bootstrap and published with GitHub Pages.
+     Bootstrap is a ready-made set of CSS styles: you add its class names
+     (like "container", "btn", "card") to your HTML and it styles them for you. -->
+<html lang="en">
+
+<head>
+    <!-- Information ABOUT the page (not shown on the page itself) -->
+    <meta charset="utf-8">                                                 <!-- show all characters correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">   <!-- fit the screen on phones -->
+    <title>Tshepo Mulambo | Portfolio</title>                              <!-- text on the browser tab -->
+
+    <!-- Bootstrap's CSS, loaded from a CDN (a website that hosts it), so nothing needs installing -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- My own extra styles. This comes AFTER Bootstrap so my styles win if they clash. -->
+    <link href="css/portfolio.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== Navigation bar (the menu across the top) =====
+         navbar-dark bg-dark = dark background with light text
+         fixed-top           = stays at the top of the screen while you scroll -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">   <!-- "container" keeps the content a nice width and centred -->
+
+            <!-- My name on the left. href="#top" jumps back to the top of the page. -->
+            <a class="navbar-brand" href="#top">Tshepo Mulambo</a>
+
+            <!-- On phones the menu folds away into this "hamburger" button.
+                 data-bs-target="#menu" tells Bootstrap which menu to open when it's clicked. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Open menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- The menu links. Each href="#..." jumps to the section with that id further down the page.
+                 ms-auto pushes the links to the right-hand side. -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Header (the big coloured banner) =====
+         The "hero" class is my own style in css/portfolio.css (blue background).
+         text-white and text-center are Bootstrap classes. -->
+    <header id="top" class="hero text-white text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Tshepo Mulambo</h1>   <!-- display-4 = extra-large heading, fw-bold = bold -->
+            <p class="lead">Full-stack web development student at Code College</p>   <!-- lead = slightly bigger text -->
+            <!-- A link styled to look like a button. It jumps down to the Projects section. -->
+            <a href="#projects" class="btn btn-light btn-lg mt-3">See my projects</a>
+        </div>
+    </header>
+
+    <!-- ===== About section =====
+         py-5 = padding (space) above and below the section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">About me</h2>   <!-- mb-4 = margin (space) below the heading -->
+            <p class="fs-5">                 <!-- fs-5 = slightly bigger font size -->
+                I'm learning full-stack web development at Code College. I started with JavaScript
+                fundamentals and I'm now learning Git and GitHub. These are the projects I've built so far.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== Projects section =====
+         bg-light = light grey background, to separate it from the sections around it -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Projects</h2>
+
+            <!-- Bootstrap's grid: a "row" holds "columns".
+                 col-md-4 = each card takes 4 of the 12 grid columns on medium and bigger screens,
+                 so 3 cards fit side by side. On phones they stack on top of each other.
+                 g-4 = a gap between the cards. -->
+            <div class="row g-4">
+
+                <!-- Project 1 card -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">   <!-- h-100 = all cards the same height, shadow-sm = small shadow -->
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Guessing Game</h3>
+                            <p class="card-text">Guess a random number from 1 to 20. The game tells you if
+                                you're too high or too low until you get it right.</p>
+                            <p class="small text-muted">JavaScript: prompt, parseInt, while loops, if/else, Math.random</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <!-- Link to the live game on GitHub Pages -->
+                            <a href="https://tshepo57.github.io/Into-to-programming/Projects/project-1-guessing-game/"
+                                class="btn btn-primary btn-sm">Play it</a>
+                            <!-- Link to the game's code on GitHub -->
+                            <a href="https://github.com/Tshepo57/Into-to-programming/tree/main/Projects/project-1-guessing-game"
+                                class="btn btn-outline-secondary btn-sm">Code on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 card -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Shopping Cart</h3>
+                            <p class="card-text">A snack shop cart. Add and remove items (never below zero),
+                                then check out to see the total price.</p>
+                            <p class="small text-muted">JavaScript: arrays, functions, DOM, click events</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="https://tshepo57.github.io/Into-to-programming/Projects/project-2-shopping-cart/"
+                                class="btn btn-primary btn-sm">Try it</a>
+                            <a href="https://github.com/Tshepo57/Into-to-programming/tree/main/Projects/project-2-shopping-cart"
+                                class="btn btn-outline-secondary btn-sm">Code on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card for my book exercises -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Intro to Programming exercises</h3>
+                            <p class="card-text">My exercises from <em>JavaScript for Kids</em>, including a
+                                Hangman game and a random insult generator.</p>
+                            <p class="small text-muted">JavaScript: variables, arrays, objects, loops</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="https://github.com/Tshepo57/Into-to-programming"
+                                class="btn btn-outline-secondary btn-sm">Code on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills section =====
+         Each "badge" is a small dark label. me-2 / mb-2 = a little space to the right and below each one. -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Skills</h2>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">HTML</span>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">CSS</span>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">JavaScript</span>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">Bootstrap</span>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">Git</span>
+            <span class="badge text-bg-dark fs-6 me-2 mb-2">GitHub</span>
+        </div>
+    </section>
+
+    <!-- ===== Contact section (dark background, white text, centred) ===== -->
+    <section id="contact" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="mb-3">Contact</h2>
+            <p>See all my code on GitHub.</p>
+            <a href="https://github.com/Tshepo57" class="btn btn-light">github.com/Tshepo57</a>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== &copy; shows the © symbol, &middot; shows a small dot -->
+    <footer class="py-3 text-center small text-muted">
+        &copy; 2026 Tshepo Mulambo &middot; Built with Bootstrap, hosted on GitHub Pages
+    </footer>
+
+    <!-- Bootstrap's JavaScript. It makes the phone menu button open and close.
+         It goes at the end so the page shows first. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
