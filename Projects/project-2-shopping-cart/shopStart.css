@@ -1,0 +1,52 @@
+/* =====================================================
+   Shopping Cart styles
+   The table styles come from the teacher's starter file.
+   The body and button styles were added.
+   ===================================================== */
+
+/* The whole page: clean font, not too wide, centred */
+body {
+    font-family: arial, sans-serif;
+    max-width: 800px;     /* never wider than 800 pixels */
+    margin: 40px auto;    /* 40px space at the top; "auto" centres it */
+    padding: 0 16px;      /* a little space at the sides on small screens */
+}
+
+/* The table of snacks */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;   /* join the cell borders into single lines */
+    width: 100%;                 /* fill the width of the page */
+}
+
+/* Every cell (td) and heading cell (th) */
+td,
+th {
+    border: 1px solid #dddddd;   /* thin light-grey border */
+    text-align: left;
+    padding: 8px;                /* space inside each cell */
+}
+
+/* Shade every second row grey, so the rows are easier to read */
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* All buttons (Add, Remove, Checkout): hand cursor and some padding */
+button {
+    cursor: pointer;
+    padding: 4px 10px;
+}
+
+/* The Checkout button is bigger, with space above it */
+#checkoutButton {
+    margin-top: 16px;
+    font-size: 1rem;
+    padding: 8px 20px;
+}
+
+/* The total shown after checkout: bigger and bold */
+#total {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
