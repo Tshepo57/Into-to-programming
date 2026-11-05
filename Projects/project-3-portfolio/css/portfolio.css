@@ -1,0 +1,22 @@
+/* =====================================================
+   Portfolio styles
+   Most of the look comes from Bootstrap (linked in index.html).
+   These are a few extra styles on top of Bootstrap.
+   ===================================================== */
+
+/* Scroll smoothly when a menu link is clicked, instead of jumping */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;   /* stop the fixed menu bar from covering the section headings */
+}
+
+/* The big coloured header at the top of the page */
+.hero {
+    padding: 160px 0 100px;   /* lots of space above (under the menu) and below the text */
+    background: linear-gradient(135deg, #1d3557, #457b9d);   /* dark blue fading to lighter blue */
+}
+
+/* Make the project titles on the cards bold */
+.card-title {
+    font-weight: bold;
+}
