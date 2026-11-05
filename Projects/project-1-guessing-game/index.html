@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is a modern HTML5 page -->
+<html lang="en">
+<!-- lang="en" says the page is in English (this helps screen readers and search engines) -->
+
+<head>
+    <!-- The <head> holds information ABOUT the page. Nothing in here shows on the page itself. -->
+
+    <!-- utf-8 lets the page show every kind of character correctly -->
+    <meta charset="utf-8">
+
+    <!-- Makes the page fit the screen width on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The text shown on the browser tab -->
+    <title>Guessing Game</title>
+
+    <!-- A small amount of CSS to make the page look neat -->
+    <style>
+        /* body = the whole page: a clean font, kept narrow and centred */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;     /* never wider than 600 pixels */
+            margin: 40px auto;    /* 40px of space at the top; "auto" centres it left and right */
+            padding: 0 16px;      /* a little space at the sides on small screens */
+        }
+
+        /* Make the button bigger and show a hand cursor when you hover over it */
+        button {
+            font-size: 1rem;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        /* The paragraph where the final result is written */
+        #result {
+            margin-top: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The <body> holds everything you SEE on the page -->
+
+    <h1>Guessing Game</h1>
+    <p>I'm thinking of a number between 1 and 20. Can you guess it?</p>
+
+    <!-- The Play button. Its id lets JavaScript find it and react when it's clicked. -->
+    <button id="playButton">Play</button>
+
+    <!-- Empty for now. JavaScript writes the result in here when the game ends. -->
+    <p id="result"></p>
+
+    <!-- Load the JavaScript file LAST, so the button and paragraph above already exist
+         when the script looks for them with getElementById -->
+    <script src="guessingGame.js"></script>
+</body>
+
+</html>
